@@ -45,7 +45,7 @@ name of the course in the Moodle DB.
 
 Here is an example of a response:
 
-```json
+```javascript
 start: 4,
 number: 50,
 per-page: 10,
