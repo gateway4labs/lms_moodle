@@ -4,10 +4,10 @@ class block_lms4labs_edit_form extends block_edit_form {
   protected function specific_definition($mform) {
     $mform->addElement('header', 'configheader', get_string('blocksettings', 'block'));
 
-    $mform->addElement('text', 'config_name', 'LabManager URL', 'maxlength="255" size="50" ');
+    $mform->addElement('text', 'config_name', 'Lab Manager Name', 'maxlength="255" size="50" ');
     $mform->addElement('static', 'config_name_description', '', 'E.g. MIT Lab Manager ');
 
-    $mform->addElement('text', 'config_labmanagerurl', 'LabManager URL', 'maxlength="255" size="50" ');
+    $mform->addElement('text', 'config_labmanagerurl', 'Lab Manager URL', 'maxlength="255" size="50" ');
     $mform->addElement('static', 'config_description', '', 'E.g. http://localhost:5000/lms4labs (no trailing /) ');
 
     $mform->addElement('text',     'config_labuser', 'Lab Manager User',     'maxlength="255" size="50" ');

@@ -1,10 +1,19 @@
 <?php
 class block_lms4labs extends block_base {
     public function init() {
-      if (empty($this->config->text)) {
-        $this->config->text = get_string('lms4labs', 'block_lms4labs');
+      $this->title = get_string('lms4labs', 'block_lms4labs');
+    }
+
+    public function specialization() {
+      if (!empty($this->config->name)) {
+        $this->title = $this->config->name;
+      } else {
+        $this->config->name = get_string('lms4labs', 'block_lms4labs');
       }
-      $this->title = $this->config->text
+
+      if (empty($this->config->name)) {
+        $this->config->name = get_string('lms4labs', 'block_lms4labs');
+      }
     }
 
     public function get_content() {
