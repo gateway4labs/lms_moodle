@@ -1,7 +1,10 @@
 <?php
 class block_lms4labs extends block_base {
     public function init() {
-        $this->title = get_string('lms4labs', 'block_lms4labs');
+      if (empty($this->config->text)) {
+        $this->config->text = get_string('lms4labs', 'block_lms4labs');
+      }
+      $this->title = $this->config->text
     }
 
     public function get_content() {
@@ -12,6 +15,10 @@ class block_lms4labs extends block_base {
       $this->content->footer = 'Footer here...';
 
       return $this->content;
+    }
+
+    public function instance_allow_multiple() {
+      return true;
     }
 }
 ?>
