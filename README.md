@@ -41,7 +41,7 @@ This will respond with the following JSON:
 * `per-page`: The number of courses per page on each response. Integer
 * `courses`: An array of `Courses` objects. Each course object will have an `id`
 which is the ID of the course in the Moodle database, and a `name` which is the
-name of the course in the Moodle DB.
+short name of the course in the Moodle DB.
 
 Here is an example of a response:
 
@@ -50,25 +50,8 @@ start: 4,
 number: 50,
 per-page: 10,
 courses: [
-  {id: 3, name: 'Informática para máquinas'},
-  {id: 4, name: 'Información sobre lo que siempre quisiste saber sin saber.'}
+  {id: 3, name: 'INFO101'},
+  {id: 4, name: 'MIDTERM 1'}
 ]
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
